@@ -1,0 +1,67 @@
+.section-bg-pink {
+    background-color: mistyrose;
+    padding: 60px 0;
+}
+
+.section-bg-white {
+    background-color: white;
+    padding: 60px 0;
+}
+
+/* Pseudo */
+.headline::before,
+.headline::after {
+    color: white;
+    font-size: 42px;
+}
+
+.headline::before {
+    content: 'Hello from the BEFORE element';
+}
+
+.headline::after {
+    content: 'Hello from the AFTER element';
+}
+
+/* headline decorated */
+.headline-decorated::before,
+.headline-decorated::after {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    background-color: rebeccapurple; 
+    content: '';
+}
+
+/* Headline icon */
+.headline-timeline {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 46px;
+}
+
+.headline-timeline::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: rebeccapurple; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    content: '';
+}
+
+.headline-timeline::after {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 5px;
+    height: 100%;
+    display: block;
+    background-color: rebeccapurple; 
+    content: '';
+}
+
