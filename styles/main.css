@@ -1,3 +1,4 @@
+/* Themed sections */
 .section-bg-pink {
     background-color: mistyrose;
     padding: 60px 0;
@@ -8,7 +9,8 @@
     padding: 60px 0;
 }
 
-/* Pseudo */
+/* Pseudo elements */
+/* Pseudo elements can be styled, like you would style any other element */
 .headline::before,
 .headline::after {
     color: white;
@@ -26,18 +28,32 @@
 /* headline decorated */
 .headline-decorated::before,
 .headline-decorated::after {
+    /* By default pseudo elements have display set to inline */
     display: inline-block;
     width: 50px;
     height: 20px;
+    /* Without any content we might need to add a background so we can see the element.
+    You can always check in the dev tools to verify if the pseudo element is rendered.
+    */
     background-color: rebeccapurple; 
+    /* We need to add this property, even though empty, 
+    otherwise the before and after will not appear  */
     content: '';
 }
 
-/* Headline icon */
+/* Headline timeline */
 .headline-timeline {
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
+    /* 
+    This number is calculated from the width of the pseudo element 
+    plus the space we want to create between the pseudo element and 
+    the rest of the content:
+    30px (psuedo width) + 16px (space between pseudo element and content)
+    We need to add this space since the pseudo elements are positioned absolutely and 
+    no space will be reserved for them and they will be overlapping the content.
+    */
     padding-left: 46px;
 }
 
